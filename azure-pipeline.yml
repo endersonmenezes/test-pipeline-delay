@@ -1,8 +1,7 @@
 trigger:
 - main
 
-pool:
-  - 'TIS-Linux-Pool'
+pool: TIS-Linux-Pool
 
 steps:
 - script: |
