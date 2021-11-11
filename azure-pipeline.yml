@@ -1,0 +1,10 @@
+trigger:
+- main
+
+pool:
+  - 'TIS-Linux-Pool'
+
+steps:
+- script: |
+    sleep 1m
+  displayName: 'Delay'
