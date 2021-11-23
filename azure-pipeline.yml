@@ -1,23 +1,9 @@
 trigger:
 - main
 
-# pool: TIS-Linux-Pool
-pool:
-  vmImage: 'ubuntu-latest'
+pool: TIS-Linux-Pool
 
-stages:
-  - stage: Deploy
-    jobs:
-    - deployment: DeployJob
-      timeoutInMinutes: 10
-      environment:
-        vmImage: 'ubuntu-latest'
-      strategy:
-        runOnce:
-          deploy:
-            steps:
-              - task: CmdLine@2
-                displayName: 'Install Dependencies'
-                inputs:
-                  script: |
-                    echo "Hello World!"
+steps:
+- script: |
+    sleep 1m
+  displayName: 'Delay'
