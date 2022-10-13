@@ -1,7 +1,7 @@
 trigger:
  - main
 
-pool: PoolTIS-NonProd
+pool: TIS_POOL_RANCHER_NP
 
 steps:
 - script: |
