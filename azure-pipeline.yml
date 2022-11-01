@@ -4,10 +4,11 @@ trigger:
 pool: TIS_POOL_RANCHER_NP
 
 steps:
-- script: |
-    sleep 1m
-  displayName: 'Delay'
 
 - script: |
     python -V
   displayName: 'Python Version'
+
+- script: |
+    sleep 1m
+  displayName: 'Delay'
