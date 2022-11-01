@@ -8,6 +8,12 @@ steps:
 - script: |
     python -V
   displayName: 'Python Version'
+  condition: always()
+
+- script: |
+    python3.11 -V
+  displayName: 'Python 3.11 Version'
+  condition: always()
 
 - script: |
     sleep 1m
