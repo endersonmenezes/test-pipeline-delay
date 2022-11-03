@@ -27,7 +27,7 @@ steps:
 
 - script: |
     python3.7 -V
-  displayName: 'Python 3.8 Version'
+  displayName: 'Python 3.7 Version'
   condition: always()
 
 - script: |
@@ -56,27 +56,27 @@ steps:
   condition: always()
 
 - script: |
-    python3.11 -m ansible --version
+    python3.11 -m ansible config --version
   displayName: 'Ansible Version on Python 3.11'
   condition: always()
 
 - script: |
-    python3.10 -m ansible --version
+    python3.10 -m ansible config --version
   displayName: 'Ansible Version on Python 3.10'
   condition: always()
 
 - script: |
-    python3.9 -m ansible --version
+    python3.9 -m ansible config --version
   displayName: 'Ansible Version on Python 3.9'
   condition: always()
 
 - script: |
-    python3.8 -m ansible --version
+    python3.8 -m ansible config --version
   displayName: 'Ansible Version on Python 3.8'
   condition: always()
 
 - script: |
-    python3.7 -m ansible --version
+    python3.7 -m ansible config --version
   displayName: 'Ansible Version on Python 3.7'
   condition: always()
 
