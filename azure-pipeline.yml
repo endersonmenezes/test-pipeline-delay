@@ -6,13 +6,118 @@ pool: TIS_POOL_RANCHER_NP
 steps:
 
 - script: |
-    python -V
-  displayName: 'Python Version'
+    python3.11 -V
+  displayName: 'Python 3.11 Version'
   condition: always()
 
 - script: |
-    python3.11 -V
-  displayName: 'Python 3.11 Version'
+    python3.10 -V
+  displayName: 'Python 3.10 Version'
+  condition: always()
+
+- script: |
+    python3.9 -V
+  displayName: 'Python 3.9 Version'
+  condition: always()
+
+- script: |
+    python3.8 -V
+  displayName: 'Python 3.8 Version'
+  condition: always()
+
+- script: |
+    python3.7 -V
+  displayName: 'Python 3.8 Version'
+  condition: always()
+
+- script: |
+    python3.11 -m poetry --version
+  displayName: 'Poetry Version on Python 3.11'
+  condition: always()
+
+- script: |
+    python3.10 -m poetry --version
+  displayName: 'Poetry Version on Python 3.10'
+  condition: always()
+
+- script: |
+    python3.9 -m poetry --version
+  displayName: 'Poetry Version on Python 3.9'
+  condition: always()
+
+- script: |
+    python3.8 -m poetry --version
+  displayName: 'Poetry Version on Python 3.8'
+  condition: always()
+
+- script: |
+    python3.7 -m poetry --version
+  displayName: 'Poetry Version on Python 3.7'
+  condition: always()
+
+- script: |
+    python3.11 -m ansible --version
+  displayName: 'Ansible Version on Python 3.11'
+  condition: always()
+
+- script: |
+    python3.10 -m ansible --version
+  displayName: 'Ansible Version on Python 3.10'
+  condition: always()
+
+- script: |
+    python3.9 -m ansible --version
+  displayName: 'Ansible Version on Python 3.9'
+  condition: always()
+
+- script: |
+    python3.8 -m ansible --version
+  displayName: 'Ansible Version on Python 3.8'
+  condition: always()
+
+- script: |
+    python3.7 -m ansible --version
+  displayName: 'Ansible Version on Python 3.7'
+  condition: always()
+
+- script: |
+    python3.11 -m virtualenv --version
+  displayName: 'Virtualenv Version on Python 3.11'
+  condition: always()
+
+- script: |
+    python3.10 -m virtualenv --version
+  displayName: 'Virtualenv Version on Python 3.10'
+  condition: always()
+
+- script: |
+    python3.9 -m virtualenv --version
+  displayName: 'Virtualenv Version on Python 3.9'
+  condition: always()
+
+- script: |
+    python3.8 -m virtualenv --version
+  displayName: 'Virtualenv Version on Python 3.8'
+  condition: always()
+
+- script: |
+    python3.7 -m virtualenv --version
+  displayName: 'Virtualenv Version on Python 3.7'
+  condition: always()
+
+- script: |
+    terraform version
+  displayName: 'Terraform Version'
+  condition: always()
+
+- script: |
+    git --version
+  displayName: 'Git Version'
+  condition: always()
+
+- script: |
+    docker --version
+  displayName: 'Docker Version'
   condition: always()
 
 - script: |
