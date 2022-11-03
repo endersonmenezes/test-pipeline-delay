@@ -76,11 +76,6 @@ steps:
   condition: always()
 
 - script: |
-    python3.7 -m ansible config --version
-  displayName: 'Ansible Version on Python 3.7'
-  condition: always()
-
-- script: |
     python3.11 -m virtualenv --version
   displayName: 'Virtualenv Version on Python 3.11'
   condition: always()
@@ -116,8 +111,8 @@ steps:
   condition: always()
 
 - script: |
-    docker --version
-  displayName: 'Docker Version'
+    /kaniko/executor version
+  displayName: 'Kaniko Version'
   condition: always()
 
 - script: |
