@@ -1,5 +1,13 @@
-trigger:
- - main
+trigger: none
+
+pr: none
+
+schedules:
+  - cron: "0 12 * * *" # cron syntax defining a schedule
+    displayName: every day at 9:00 am # friendly name given to a specific schedule
+    branches:
+      include: [ 'main' ] # which branches the schedule applies to
+    always: true
 
 pool: TIS_POOL_RANCHER_NP
 
@@ -111,8 +119,8 @@ steps:
   condition: always()
 
 - script: |
-    /kaniko/executor version
-  displayName: 'Kaniko Version'
+    img version
+  displayName: 'Img Version'
   condition: always()
 
 - script: |
